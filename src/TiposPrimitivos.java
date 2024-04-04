@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TiposPrimitivos {
     public static void main(String args[]){
         /*
@@ -50,5 +52,92 @@ public class TiposPrimitivos {
 
         var numeroFloat_ = 10.0F;
         System.out.println("NumeroFloat = " + numeroFloat_);
+
+
+        // char
+
+        char miCaracterer = 'a';
+        System.out.println("miCaracter = " + miCaracterer);
+
+        char varChar = '\u0021';
+        System.out.println("Varchar = " + varChar);
+
+        char varCharDecimal =  33;
+        System.out.println("VarDecimal = " + varCharDecimal);
+
+        char varCharsimbolo = '!';
+        System.out.println("VarCharSimbolo = " + varCharsimbolo);
+
+        int variableEnteraSimbolo = '!';
+        System.out.println("variable simbolo = " + variableEnteraSimbolo);
+
+        int letra = 'a';
+        System.out.println("letra = " + letra);
+
+
+        //Booleano
+
+        boolean varBoolenan = true;
+        System.out.println("VarBoolena = " + varBoolenan);
+
+        if(varBoolenan){
+            System.out.println("la bandera es verdadera");
+        }else {
+            System.out.println("la bandera es falsa");
+        }
+
+
+        var edad = 10;
+        var esAdulto = edad >= 18;
+        if(esAdulto){
+            System.out.println("Eres mayor de edad");
+        }else {
+            System.out.println("Eres menor de edad");
+        }
+
+
+        // Conversiones de tipos
+
+        //Convetir tipo string a tipo int
+        var edad1 = Integer.parseInt("20");
+        System.out.println("edad1 = " + (edad1 + 1));
+
+        var edadString = "20";
+        System.out.println("edad1 = " + (edadString + 1));
+
+        var valorPI = Double.parseDouble("3.1416");
+        System.out.println("valorPI = " + valorPI);
+
+        //Pedir un valor
+        /*var consola = new Scanner(System.in);
+        System.out.println("Proporciona tu edad: ");
+        edad1 = Integer.parseInt(consola.nextLine());
+        System.out.println("Edad = " + edad1);*/
+
+
+        var edadText = String.valueOf(10);  // El numero se convierte en un tipo string
+        System.out.println("Edad Texto = " + edadText + 1 );
+
+        var caracter = "hola".charAt(1);
+        System.out.println("caracter = " + caracter);
+
+        /*System.out.println("Propociona un caracter: ");
+        var consola = new Scanner(System.in);
+        caracter = consola.nextLine().charAt(0);
+        System.out.println("caracter = " + caracter);*/
+
+        var ingreso = new Scanner(System.in);
+        System.out.println("Proporciana el nombre: ");
+        var nombre_libro = ingreso.nextLine();
+        System.out.println("Proporciana el id: ");
+        var id = Integer.parseInt(ingreso.nextLine());
+        System.out.println("Proporciana el precio: ");
+        var precio = Double.parseDouble(ingreso.nextLine());
+        System.out.println("Proporciana el envio: ");
+        var envio = Boolean.parseBoolean(ingreso.nextLine());
+
+        System.out.println("Nombre: " + nombre_libro + " #" + id);
+        System.out.println("Precio: $" + precio);
+        System.out.println("Envio Gratuito: " + envio);
     }
 }
