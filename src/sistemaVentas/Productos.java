@@ -1,16 +1,17 @@
 package sistemaVentas;
 
 public class Productos {
-    private int idProducto;
+    private final int idProducto;
     private String nombre;
     private double precio;
-    private int contadorProductos;
+    private static int contadorProductos;
 
     private Productos() {
-        this.idProducto = ++contadorProductos;
+        this.idProducto = ++Productos.contadorProductos;
     }
 
     public Productos(String nombre, double precio) {
+        this();
         this.nombre = nombre;
         this.precio = precio;
     }
